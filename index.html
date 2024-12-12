@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+       
+     <div class="mainContainer">
+        <h1> <u> ATM Machine </u> </h1>
+
+        <div id="loginPage" >
+            <label for="loginAccNo"> Account No:</label>  <br>
+            <input type="text" id="loginAccNo" placeholder="enter Account number" maxlength="6" class="textboxStyle" required>  <br>
+           
+            <label for="loginPin"> Pin No:</label>  <br>
+            <input type="password" id="loginPin" placeholder="Enter PIN" maxlength="4" class="textboxStyle" required>  <br>
+           
+            <button onclick="login()">Login</button>
+            
+            <p id="loginError" ></p>
+
+        </div>
+
+            <div id= "options" style="display: none">
+                <h3> Welcome </h3> 
+                <p> Total Balance: $<span id="balanceAmount"> 1000</span></p>
+              
+                <h3> Please Select the Option: </h3> <br>
+                <button onclick="checkBalance()">Chech Balance</button>
+                 <button onclick="deposit()"> Deposit </button>
+                 <button onclick="withdraw()"> Withdraw </button>
+                 <button onclick="logout()"> Logout </button>
+                 
+             </div>
+
+
+             <div id="depositPortal" style="display: none">
+                <h4> Deposit</h4>
+                <label > Amount to Deposit :</label>  <br>
+                <input type="number" id="depositAmt" placeholder="Enter amount" class="textboxStyle" required> <br>
+                <button onclick="depositFun()">Deposit</button>
+                <button onclick="depositCancel()">Cancel</button>
+             </div>
+
+             <div id="withdrawPortal" style="display: none">
+                <h4> Withdraw</h4>
+                <label > Enter Amount :</label> <br>
+                <input type="text" id="withdrawAmt" class="textboxStyle" required> <br>
+                <button onclick="withdrawFun()">Withdraw</button>
+                <button onclick="withdrawCancel()">Cancel</button>
+             </div>
+
+        
+
+
+        
+        
+
+
+     </div>
+        
+        <script src="app.js" async defer></script>
+    </body>
+</html>
